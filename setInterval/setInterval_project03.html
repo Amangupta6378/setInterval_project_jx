@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid rgb(255, 255, 255);
+      }
+
+      .project {
+        background-color: #1c1c1c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      .color {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* height: 80px; */
+        background-color: white;
+      }
+      a {
+        border: 1px solid black;
+        padding: 10px 35px;
+        border-radius: 10px;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a
+        target="blank"
+        href="https://www.youtube.com/watch?v=efrW5-IYoCU&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=40"
+        >Youtube Channel</a
+      >
+    </nav>
+
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const insert = document.querySelector("#insert");
+
+    window.addEventListener("keydown", (e) => {
+      insert.innerHTML = `
+            <div class='color'>
+                <table>
+                <tr>
+                    <th>key</th>
+                    <th>Keycode</th>
+                    <th>code</th>
+                </tr>
+                <tr>
+                    <td>${e.key=== '' ? 'Space':e.key}  </td>
+                    <td>${e.keycode}</td>
+                    <td>${e.code}</td>
+                </tr>
+                
+                </table>
+            <div/>
+            
+        `;
+    });
+  </script>
+</html>

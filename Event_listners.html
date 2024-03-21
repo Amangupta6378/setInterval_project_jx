@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #414141">
+    <h2>Amazing Image</h2>
+    <div>
+      <ul id="image">
+        <li>
+          <img
+            id="basketball"
+            src="https://i.pinimg.com/564x/c5/e9/6a/c5e96acf6632591428475d2a2c8afed0.jpg"
+            alt=""
+            width="200px"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="football"
+            src="https://i.pinimg.com/474x/1a/52/8a/1a528abe89caa6ddadafb2d65fe8e969.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="cricket"
+            src="https://i.pinimg.com/564x/d2/c8/a6/d2c8a68263866a7c321d0667df0221b6.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="badminton"
+            src="https://i.pinimg.com/474x/f1/2c/27/f12c27978ffb271f9ce92558db24780e.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <a href="https://www.google.com/" id="google" style="color: white"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("football").onclick = function () {
+    //   alert("You clicked football");
+    // };
+    // attachEvent()
+    //jquery - on
+    //foundation :->
+    //types, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    //clientX, ctrlKey. shiftKey, keyCode
+
+    // document.getElementById('cricket').addEventListener('click', function(e){
+    //     console.log(e);
+
+    // },true)
+
+    // document.getElementById("image").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("Clicked inside the ul");
+    //   },
+    //   false
+    // );
+    // document.getElementById("football").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("football clicked");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.getElementById('google').addEventListener(
+    //   'click',
+
+      
+    // );
+
+    document.querySelector('#image').addEventListener('click', function(e){
+        console.log(e.target.tagName); 
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+
+    })
+  </script>
+</html>
