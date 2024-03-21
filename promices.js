@@ -4,7 +4,7 @@ const promiseOne = new Promise(function(resolve, reject)  {
     setTimeout(function(){
         console.log('Async task is complete');
         resolve()
-    }, 1000)
+    }, 5000)
 })
 
 promiseOne.then(function(){
@@ -103,3 +103,11 @@ fetch('https://jsonplaceholder.typicode.com/usershiteshchoudhry')
 //     return data.json()
 // })
 // .catch((error)=> console.log(error))
+
+
+const PromiseTen = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("Here is promiseTen");
+        resolve()
+    }, 2000)
+})
